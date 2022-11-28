@@ -1,0 +1,126 @@
+:root {
+--main-background-color: hsl(217, 54%, 11%);
+--card-background-color: hsl(216, 50%, 16%);
+--name-color: hsl(0, 0%, 100%);
+--sm-text-color: hsl(215, 51%, 70%);
+--accent-color: hsl(178, 100%, 50%);
+--accent-dark-color: hsl(215, 32%, 27%);
+--sm-text-font-weight: 300;
+--sm-accent-font-weight: 400;
+--bold-accent-font-weight: 600;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    margin: auto;
+    background-color: var(--main-background-color);
+    font-family: Outfit, sans-serif;
+    font-size: 18px;
+    
+}
+
+a {
+    color: var(--name-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--card-background-color);
+  border-radius: 10px;
+  min-width: 345px;
+  max-width: 70%;
+}
+
+.card-picture {
+    max-width: 100%;
+    margin: 1em 1em 0em 1em;
+}
+
+.image-equilibrium {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.card-info {
+    color: var(--sm-text-color);
+    font-weight: var(--sm-text-font-weight);
+    margin: .5em 1.5em;
+
+}
+
+.product-name {
+    font-weight: var(--bold-accent-font-weight);
+    font-size: 1.7rem;
+}
+
+.description {
+    
+}
+
+.auction-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.price-info {
+    font-weight: var(--bold-accent-font-weight);
+    color: var(--accent-color);
+    display: flex;
+    flex-direction: row;
+    flex: 50%;
+}
+
+.ethereum-icon {
+    min-width: 1.2em;
+    height: 100%; 
+    margin: .5em;
+}
+
+.clock-icon {
+    min-width: 2em;
+    height: 100%; 
+    margin: .5em .5em 0 .5em;
+}
+
+.time-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    flex: 50%;
+    
+}
+
+
+.line {
+    border-bottom: 1px solid var(--accent-dark-color);
+}
+
+.author-info {
+    display: flex;
+    flex-direction: row;
+    margin: 1em 0em 0em 0em
+}
+
+.profile-picture {
+    width: 15%;
+    height: 100%;
+    border: 1px solid var(--name-color);
+    border-radius: 50%;
+}
+
+footer {
+    display: sl
+}
