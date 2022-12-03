@@ -1,5 +1,6 @@
 :root {
 --main-background-color: hsl(217, 54%, 11%);
+--delicate-shadow: hsl(217, 55%, 10%);
 --card-background-color: hsl(216, 50%, 16%);
 --name-color: hsl(0, 0%, 100%);
 --sm-text-color: hsl(215, 51%, 70%);
@@ -15,12 +16,22 @@
 }
 
 body {
+ 
+    width: 100%;
+    min-height: 100vh;
     display: grid;
-    margin: auto;
+    justify-content: center;
+    align-content: center;
+  
     background-color: var(--main-background-color);
     font-family: Outfit, sans-serif;
     font-size: 18px;
-    
+
+}
+
+.container {
+    display: grid;
+    margin-bottom: 100px;
 }
 
 a {
@@ -33,24 +44,73 @@ a:hover {
 }
 
 .card {
+  place-self: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-content: center;
+  min-width: 375px;
+  max-width: 60%;
+  height: 100%;
+
+
   background-color: var(--card-background-color);
   border-radius: 10px;
-  min-width: 345px;
-  max-width: 70%;
+  box-shadow: 0px 10px 10px 25px var(--delicate-shadow);
+
 }
 
 .card-picture {
-    max-width: 100%;
-    margin: 1em 1em 0em 1em;
+    border-radius: 10px;
+    width: 21rem;
+    height:21rem;
+    margin: 1.2em 1.2em .2em 1.2em;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    
+}
+.card-picture:hover .image-equilibrium {
+opacity: 1;
+}
+
+.card-picture:hover .overlay-background {
+    opacity: 0.5;
+    
+}
+
+.card-picture:focus .image-equilibrium {
+    opacity: 1;
+    }
+    
+    .card-picture:focus .overlay-background {
+        opacity: 0.5;
+        
+    }
+
+.overlay-background {
+    background-color: var(--accent-color);
+    width: 21rem;
+    height:21rem ;
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .image-equilibrium {
     max-width: 100%;
     border-radius: 10px;
+}
+.eye-icon {
+    align-self: center;
 }
 
 .card-info {
@@ -63,44 +123,44 @@ a:hover {
 .product-name {
     font-weight: var(--bold-accent-font-weight);
     font-size: 1.7rem;
+    margin: 0.2em 0 0 0;
 }
 
 .description {
-    
+    font-size: 1.1rem;
 }
 
 .auction-info {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: space-between;
 }
 
 .price-info {
     font-weight: var(--bold-accent-font-weight);
+    font-size: 1rem;
     color: var(--accent-color);
     display: flex;
     flex-direction: row;
-    flex: 50%;
+    min-width: 40%;
 }
 
 .ethereum-icon {
-    min-width: 1.2em;
-    height: 100%; 
-    margin: .5em;
+    height: 40%;
+    width: 11%;
+    margin: auto .5rem 1.5rem 0;
 }
 
 .clock-icon {
-    min-width: 2em;
-    height: 100%; 
-    margin: .5em .5em 0 .5em;
+    height: 40%;
+    margin: auto .5rem auto 0;
+    
 }
 
 .time-info {
     display: flex;
     flex-direction: row;
-    justify-content: end;
-    flex: 50%;
-    
+    min-width: 40%;
 }
 
 
@@ -111,16 +171,21 @@ a:hover {
 .author-info {
     display: flex;
     flex-direction: row;
-    margin: 1em 0em 0em 0em
+    align-items: center;
+    font-size: 1rem;
 }
 
 .profile-picture {
     width: 15%;
     height: 100%;
     border: 1px solid var(--name-color);
+    margin: 1em 1em 1em 0;
     border-radius: 50%;
 }
 
 footer {
-    display: sl
+    place-self: center;
+    text-align: center;
+   color: var(--sm-text-color);
+   font-size: 0.7rem;
 }
