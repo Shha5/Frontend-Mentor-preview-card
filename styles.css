@@ -22,7 +22,6 @@ body {
     display: grid;
     justify-content: center;
     align-content: center;
-  
     background-color: var(--main-background-color);
     font-family: Outfit, sans-serif;
     font-size: 18px;
@@ -51,8 +50,6 @@ a:hover {
   min-width: 375px;
   max-width: 60%;
   height: 100%;
-
-
   background-color: var(--card-background-color);
   border-radius: 10px;
   box-shadow: 0px 10px 10px 25px var(--delicate-shadow);
@@ -72,23 +69,22 @@ a:hover {
     border-radius: 10px;
     
 }
+
 .card-picture:hover .image-equilibrium {
 opacity: 1;
 }
 
-.card-picture:hover .overlay-background {
-    opacity: 0.5;
-    
-}
-
 .card-picture:focus .image-equilibrium {
     opacity: 1;
-    }
-    
-    .card-picture:focus .overlay-background {
-        opacity: 0.5;
-        
-    }
+}
+
+.card-picture:hover .overlay-background {
+    opacity: 0.5;   
+}
+
+.card-picture:focus .overlay-background {
+    opacity: 0.5;  
+ }
 
 .overlay-background {
     background-color: var(--accent-color);
@@ -102,6 +98,7 @@ opacity: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .image-equilibrium {
@@ -116,7 +113,6 @@ opacity: 1;
     color: var(--sm-text-color);
     font-weight: var(--sm-text-font-weight);
     margin: .5em 1.5em;
-
 }
 
 .product-name {
